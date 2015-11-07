@@ -1,8 +1,7 @@
-# Win-XamarinToolsAndSamples
+# Query Extensions
 
-This repositry will contain different windows, windows phone and xamrin tools I used in different projects.
+Use query extensions to deal with query paramters as strongly typed properties,
+ this should help reduce development time and also errors that may happen from manually constructing the query string.
+The library uses attributes and reflection to generate query string.
 
-The repositry is still young but over time I hope it will contain many tools that help other fellow developers.
-
-If you found any bug, have any suggestions, please feel free to contact.
-
+Later I'll add an example here also a CodeGenerator which generate these classes for your from url.
