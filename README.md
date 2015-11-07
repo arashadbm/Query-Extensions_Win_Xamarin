@@ -31,7 +31,7 @@ To see the library in action, pull the source code and check WindowsPhoneRTSampl
 
 
 ###Usage
-For Example if you need to call Flicker Api, method GetRecentPhotos
+For Example in windows phone RT if you need to call Flicker Api, method GetRecentPhotos
 Url:https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=_YourKey_&per_page=40&page=1&extras=geo%2Cdescription&format=json&nojsoncallback=1
 
 You can create model for the query paramters:
