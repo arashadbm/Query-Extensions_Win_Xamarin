@@ -1,0 +1,65 @@
+﻿<Window x:Class="ModelsGenerator.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800" 
+        DataContext="{Binding RequestGeneratorViewModel, Mode=OneWay, Source={StaticResource Locator}}">
+    <Grid Margin="15,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Top" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextWrapping="Wrap" Text="FullRequest" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Grid.Column="1" Margin="10,0,0,0" Text="{Binding RequestUrl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxLines="3"/>
+        </Grid>
+        <Grid VerticalAlignment="Top" Grid.Row="1" Margin="0,12,0,0" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="EntityName"/>
+            <TextBox Height="17.96" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Margin="15,0,0,0" Text="{Binding EntityName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <StackPanel Grid.Row="2">
+            <CheckBox Content="Detect Type" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding DetectType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,10,0,0"/>
+            <StackPanel Height="27" Margin="0,9,0,0" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Entity Name" VerticalAlignment="Center"/>
+                <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0" Text="{Binding EntityName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="120"/>
+                <Border BorderThickness="1" BorderBrush="#FF7C7C7C" VerticalAlignment="Center" Visibility="Collapsed">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Content="Get" VerticalAlignment="Center" Margin="12,0" IsChecked="True" GroupName="RequestTypes"/>
+                        <RadioButton Content="Post" VerticalAlignment="Center" Grid.Column="1" Margin="12,0" GroupName="RequestTypes"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <Button Content="Generate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Command="{Binding GenerateCommand}" Height="27" Margin="0,10,0,0"/>
+        </StackPanel>
+        <Border Grid.Row="4" Margin="0,12" BorderThickness="1" BorderBrush="#FF7C7C7C" >
+            <Grid Margin="4" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Output" FontWeight="Bold"/><LineBreak/><Run Text="Request Parameters Object"/></TextBlock>
+                <TextBox TextWrapping="Wrap" Text="{Binding QueryParametersResult}" IsReadOnly="True" IsReadOnlyCaretVisible="True" Margin="1,8,1,1" Grid.Row="1"/>
+                <Button Content="Copy To Clip Board" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="2" Margin="2,5,0,0" Command="{Binding CopyParametersCommand}"/>
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</Window>
