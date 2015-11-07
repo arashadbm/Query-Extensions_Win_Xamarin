@@ -8,14 +8,9 @@ namespace QueryExtensions
     [AttributeUsage(AttributeTargets.Property)]
     public sealed class QueryParameterAttribute : Attribute
     {
-        public QueryParameterAttribute ( [CallerLineNumber]int order = 0 )
-        {
-            _order = order;
-        }
 
-        public QueryParameterAttribute ( String name, [CallerLineNumber]int order = 0 )
+        public QueryParameterAttribute ( String name)
         {
-            _order = order;
             Name = name;
         }
 
@@ -24,7 +19,6 @@ namespace QueryExtensions
             return "";
         }
 
-        private readonly int _order;
 
         /// <summary>
         /// Gets or sets the name of the property. If this is null, Property Name will be used.
@@ -47,9 +41,5 @@ namespace QueryExtensions
         /// </summary>
         public bool AllowEmpty { get; set; }
 
-        public int Order
-        {
-            get { return _order; }
-        }
     }
 }

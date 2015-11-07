@@ -59,10 +59,6 @@ namespace QueryExtensions
         /// </summary>
         public bool EscapeComma { get; set; }
 
-        public int Order
-        {
-            get { return _order; }
-        }
     }
 
     /// <summary>
