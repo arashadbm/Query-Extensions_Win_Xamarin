@@ -116,3 +116,6 @@ It will try to detect types, you can disable this feature by unchecking 'Detect 
 ![Model generator screenshot](https://raw.githubusercontent.com/AhmedRashad/Query-Extensions_Win_Xamarin/master/Images/ModelGenerator.JPG "Model generator WPF application")
 
 To use this project, you will need visual studio (Mine 2015 community).
+
+###TODO
+Convert Model Generator project to web hosted solution to make it easy for anyone to generate classes.
