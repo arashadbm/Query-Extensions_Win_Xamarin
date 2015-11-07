@@ -12,4 +12,6 @@ This WPF project generates Strongly Typed properties from query url, All you nee
 
 It will try to detect types, you can disable this feature by unchecking 'Detect Type' checkbox.
 
+![Model generator screenshot](https://raw.githubusercontent.com/AhmedRashad/Query-Extensions_Win_Xamarin/master/Images/ModelGenerator.JPG "Model generator WPF application")
+
 To use this project, you will need visual studio (Mine 2015 community).
