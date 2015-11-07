@@ -72,7 +72,7 @@ var parameters = new RecentQueryParamters()
  string fullUrl = baseUrl.AppendQueryString(parameters);
  
  var httpClient = new HttpClient();
- var getResponse = await httpClient.GetAsync(baseUrl);
+ var getResponse = await httpClient.GetAsync(fullUrl);
 ```
 
 - Primitives like long, bool,... and strings can be decorated by optional QueryParameter attribute to specify name of paramter, if the attribute is omitted, the property name will be used.
@@ -118,4 +118,5 @@ It will try to detect types, you can disable this feature by unchecking 'Detect 
 To use this project, you will need visual studio (Mine 2015 community).
 
 ###TODO
+Unit Testing.
 Convert Model Generator project to web hosted solution to make it easy for anyone to generate classes.
