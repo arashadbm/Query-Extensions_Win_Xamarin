@@ -4,6 +4,17 @@ Use query extensions to deal with query paramters as strongly typed properties,
  this should help reduce development time and also errors that may happen from manually constructing the query string.
 The library uses attributes and reflection to generate query string.
 
+###Features
+- Strongly Typed properties instead of manual manipulation.
+- Support for three different ArrayFormats inside query.
+- Escaping keys and values for you.
+- Overriding Name of properties by using attributes, example
+  ```
+   [QueryParameter("api_key")]
+   public string ApiKey { get; set; }
+  ```
+- You can use ModelGenerator WPF project to generate these properties for you out of the box!
+  Refer to Model Generator section below.
 
 ###PCL Target
 .Net 4.5 | Windows 8 | WPSliverLight 8 | WP 8.1 | Xamarin.Android | Xamarin.iOS | Xamarin.iOS(Classic).
@@ -14,6 +25,9 @@ Currently the project doesn't have Nuget package but I will create it later when
 
 1. Pull the source code and build QueryExtensions PCL (along with the license).
 2. Copy paste the classes of QueryExtensions PCL inside your solution (along with the license).
+
+###Sample
+To see the library in action, pull the source code and check WindowsPhoneRTSample which has a page which calls GetRecentPhotosRequest to show recent photos.
 
 
 ###Usage
@@ -66,6 +80,7 @@ var parameters = new RecentQueryParamters()
 - In case of list of values in query paramter, the optional QueryArray attribute can be used to specify ArrayFormat.
 
 ####Available Array Formats:
+
 ```
  public enum ArrayFormat
     {
