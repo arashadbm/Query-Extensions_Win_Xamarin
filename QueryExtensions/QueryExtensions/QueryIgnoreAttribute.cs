@@ -3,7 +3,7 @@
 namespace QueryExtensions
 {
     [AttributeUsage(AttributeTargets.Property)]
-    internal sealed class QueryIgnoreAttribute : Attribute
+    public sealed class QueryIgnoreAttribute : Attribute
     {
     }
 }

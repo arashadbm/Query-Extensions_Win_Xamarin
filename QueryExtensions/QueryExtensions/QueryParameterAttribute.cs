@@ -6,7 +6,7 @@ namespace QueryExtensions
 {
 
     [AttributeUsage(AttributeTargets.Property)]
-    internal sealed class QueryParameterAttribute : Attribute
+    public sealed class QueryParameterAttribute : Attribute
     {
         public QueryParameterAttribute ( [CallerLineNumber]int order = 0 )
         {

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 namespace QueryExtensions
 {
     [AttributeUsage(AttributeTargets.Property)]
-    internal sealed class QueryArrayAttribute : Attribute
+    public sealed class QueryArrayAttribute : Attribute
     {
         public QueryArrayAttribute([CallerLineNumber]int order = 0)
         {

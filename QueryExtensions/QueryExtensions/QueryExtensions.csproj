@@ -41,7 +41,7 @@
     <Compile Include="QueryArrayAttribute.cs" />
     <Compile Include="QueryIgnoreAttribute.cs" />
     <Compile Include="QueryParameterExtensions.cs" />
-    <Compile Include="QueryPropertyAttribute.cs" />
+    <Compile Include="QueryParameterAttribute.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
