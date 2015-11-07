@@ -27,7 +27,7 @@ Currently the project doesn't have Nuget package but I will create it later when
 2. Copy paste the classes of QueryExtensions PCL inside your solution (along with the license).
 
 ###Sample
-To see the library in action, pull the source code and check WindowsPhoneRTSample which has a page which calls GetRecentPhotosRequest to show recent photos.
+To see the library in action, pull the source code and check WindowsPhoneRTSample which has a page which calls GetRecentPhotosRequest to show recent photos of Flicker.
 
 
 ###Usage
@@ -104,6 +104,7 @@ var parameters = new RecentQueryParamters()
 1. Unit Test project.
 2. Nuget package.
 
+###Issues
 Please report any issue you find or contact if you have enhancements or ideas.
 
 #Model Generator
