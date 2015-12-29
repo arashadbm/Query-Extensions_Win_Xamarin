@@ -122,4 +122,4 @@ Unit Testing.
 Convert Model Generator project to web hosted solution to make it easy for anyone to generate classes.
 
 ###License
-GNU v3, Check LICENSE file under Main repositry.
+GNU v3, check license file under main repositry.
