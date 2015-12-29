@@ -120,3 +120,6 @@ To use this project, you will need visual studio (Mine 2015 community).
 ###TODO
 Unit Testing.
 Convert Model Generator project to web hosted solution to make it easy for anyone to generate classes.
+
+###License
+GNU v3, Check LICENSE file under Main repositry.
