@@ -4,7 +4,7 @@ Use query extensions to deal with query paramters as strongly typed properties,
  this should help reduce development time and also errors that may happen from manually constructing the query string.
 The library uses attributes and reflection to generate query string.
 
-###Features
+### Features
 - Strongly Typed properties instead of manual manipulation.
 - Support for three different ArrayFormats inside query.
 - Escaping keys and values for you.
@@ -16,21 +16,21 @@ The library uses attributes and reflection to generate query string.
 - You can use ModelGenerator WPF project to generate these properties for you out of the box!
   Refer to Model Generator section below.
 
-###PCL Target
+### PCL Target
 .Net 4.5 | Windows 8 | WPSliverLight 8 | WP 8.1 | Xamarin.Android | Xamarin.iOS | Xamarin.iOS(Classic).
 
 
-###Install
+### Install
 Currently the project doesn't have Nuget package but I will create it later when I do unit tests on the project, but you can:
 
 1. Pull the source code and build QueryExtensions PCL (along with the license).
 2. Copy paste the classes of QueryExtensions PCL inside your solution (along with the license).
 
-###Sample
+### Sample
 To see the library in action, pull the source code and check WindowsPhoneRTSample which has a page which calls GetRecentPhotosRequest to show recent photos of Flicker.
 
 
-###Usage
+### Usage
 For Example in windows phone RT if you need to call Flicker Api, method GetRecentPhotos
 Url:https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=_YourKey_&per_page=40&page=1&extras=geo%2Cdescription&format=json&nojsoncallback=1
 
@@ -79,7 +79,7 @@ var parameters = new RecentQueryParamters()
 
 - In case of list of values in query paramter, the optional QueryArray attribute can be used to specify ArrayFormat.
 
-####Available Array Formats:
+#### Available Array Formats:
 
 ```
  public enum ArrayFormat
@@ -100,11 +100,11 @@ var parameters = new RecentQueryParamters()
     }
 ```
 
-###TODO
+### TODO
 1. Unit Test project.
 2. Nuget package.
 
-###Issues
+### Issues
 Please report any issue you find or contact if you have enhancements or ideas.
 
 #Model Generator
@@ -117,9 +117,9 @@ It will try to detect types, you can disable this feature by unchecking 'Detect 
 
 To use this project, you will need visual studio (Mine 2015 community).
 
-###TODO
+### TODO
 Unit Testing.
 Convert Model Generator project to web hosted solution to make it easy for anyone to generate classes.
 
-###License
+### License
 GNU v3, check license file under main repositry.
