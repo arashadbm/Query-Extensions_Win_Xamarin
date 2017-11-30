@@ -107,7 +107,7 @@ var parameters = new RecentQueryParamters()
 ### Issues
 Please report any issue you find or contact if you have enhancements or ideas.
 
-#Model Generator
+# Model Generator
 
 This WPF project generates Strongly Typed properties from query url, All you need to to do is to copy the url and press generate.
 
